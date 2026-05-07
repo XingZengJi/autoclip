@@ -86,6 +86,10 @@ label {
   color: #4e5956;
 }
 
+.folder-path-label {
+  font-weight: 700;
+}
+
 .path-row {
   display: grid;
   grid-template-columns: minmax(260px, 1fr) auto auto;

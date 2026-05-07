@@ -227,7 +227,7 @@ export default function HomePage() {
       </section>
 
       <section className="path-panel">
-        <label htmlFor="folderPath">总文件夹路径</label>
+        <label className="folder-path-label" htmlFor="folderPath">总文件夹路径</label>
         <div className="path-row">
           <input id="folderPath" value={folderPath} onChange={(event) => setFolderPath(event.target.value)} placeholder="/Users/你的名字/Pictures/批量素材" />
           <button disabled={busy} onClick={importBatch}>导入总文件夹</button>
