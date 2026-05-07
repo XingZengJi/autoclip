@@ -1,0 +1,85 @@
+<!doctype html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>自动剪辑工具</title>
+    <link rel="stylesheet" href="/styles.css">
+  </head>
+  <body>
+    <main class="app-shell">
+      <section class="toolbar">
+        <div>
+          <h1>批量自动剪辑工具</h1>
+          <p>总文件夹 → 子文件夹项目树 → 独立排序预览 → 批量导出竖屏 4K 视频</p>
+        </div>
+        <div class="status-pill" id="serverStatus">本地运行</div>
+      </section>
+
+      <section class="path-panel">
+        <label for="folderPath">总文件夹路径</label>
+        <div class="path-row">
+          <input id="folderPath" placeholder="/Users/你的名字/Pictures/批量素材">
+          <button id="importButton">导入总文件夹</button>
+          <button id="exportButton" class="primary compact">全部导出</button>
+        </div>
+        <div class="hint">总文件夹下面的每个含图片子文件夹会成为一个独立视频项目；如果总文件夹本身只有图片，也会作为单项目导入。</div>
+      </section>
+
+      <section class="workspace">
+        <aside class="panel source-panel">
+          <div class="panel-heading">
+            <div>
+              <h2>素材项目树</h2>
+              <span id="projectSummary">等待导入</span>
+            </div>
+            <span class="mini-badge" id="imageCount">0 图</span>
+          </div>
+          <div id="projectTree" class="project-tree"></div>
+        </aside>
+
+        <section class="panel preview-panel">
+          <div class="panel-heading">
+            <div>
+              <h2 id="previewTitle">画面预览</h2>
+              <span id="previewSubtitle">在左侧操作预览</span>
+            </div>
+            <span class="mini-badge" id="previewIndex">未选择</span>
+          </div>
+          <div class="phone-frame">
+            <div class="motion-card" id="motionCard">
+              <div class="motion-border"></div>
+              <strong>等待导入图片</strong>
+              <span>导入后在左侧操作预览</span>
+            </div>
+          </div>
+          <div id="projectStats" class="project-stats"></div>
+        </section>
+
+        <aside class="panel export-panel">
+          <div class="panel-heading">
+            <div>
+              <h2>批量导出队列</h2>
+              <span>一个子文件夹生成一个 MP4</span>
+            </div>
+          </div>
+          <div class="setting">
+            <span>输出规格</span>
+            <strong>2160×3840 · 30fps</strong>
+          </div>
+          <div class="setting">
+            <span>默认节奏</span>
+            <strong>3 秒 / 图 · 0.5 秒转场</strong>
+          </div>
+          <div class="output-box visible" id="outputBox">输出目录会在导入后显示</div>
+          <div class="progress">
+            <div class="progress-bar" id="progressBar"></div>
+          </div>
+          <div id="jobStatus" class="job-status">尚未开始</div>
+          <div id="queueList" class="queue-list"></div>
+        </aside>
+      </section>
+    </main>
+    <script src="/app.js"></script>
+  </body>
+</html>

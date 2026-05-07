@@ -1,0 +1,28 @@
+# Dependencies
+node_modules/
+.pnpm-store/
+
+# Next.js
+.next/
+out/
+
+# Local app output
+auto-cut-output/
+batch-sample/auto-cut-batch-output/
+empty-test-folder/
+
+# Local tool state
+.superpowers/
+
+# Environment and logs
+.env
+.env.*
+*.log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+
+# System files
+.DS_Store
+Thumbs.db
