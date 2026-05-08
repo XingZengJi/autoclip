@@ -343,7 +343,7 @@ export default function HomePage() {
           <div className="panel-heading">
             <div>
               <h2>批量导出队列</h2>
-              <span>一个子文件夹生成一个 MP4</span>
+              <span>一个子文件夹生成一个 MP4 文件</span>
             </div>
           </div>
           <div className="setting"><span>输出规格</span><strong>2160×3840 · 30fps</strong></div>
